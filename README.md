@@ -1,12 +1,18 @@
 # How to set up environment
 
 ## Install node
-brew update
-brew install node
-node -v
+~~~bash
+    brew update
+    brew install node
+    node -v
+~~~
 
-## Install protractor (remove -g to set a local setup)
-npm install -g protractor
+## Install protractor
+~~~bash
+    npm install -g protractor
+~~~
+
+~~ remove -g to set a local setup ~~
 
 ## Update webdriver-manager and engage the listener 
 
@@ -20,7 +26,7 @@ npm install -g protractor
     .node_modules/.bin/webdriver-manager update
 ~~~
 
-~~ check 'http://localhost:4444/wd/hub' to see if it's working
+~~ check http://localhost:4444/wd/hub to see if it's working ~~
 
 # How to run proctractor testing
 
@@ -48,7 +54,7 @@ npm install -g protractor
     protractor conf.js --suites general
 ~~~
 
-### All sepcs/suites with the parameter userName modified via bash
+### All specs/suites with the parameter userName modified via bash
 ~~~bash
     protractor conf.js --params.global.userName=TestName
 ~~~
